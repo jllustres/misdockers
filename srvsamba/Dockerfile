@@ -1,4 +1,4 @@
-FROM nexus.goya.local:5000/debian:stretch-slim
+FROM nexus.server.com:5000/debian:stretch-slim
 ###FROM debian:stretch-slim
 
 MAINTAINER Jose L Navarro Lustres
