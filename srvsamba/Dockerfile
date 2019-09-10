@@ -5,14 +5,14 @@ MAINTAINER Jose L Navarro Lustres
 
 RUN apt-get update 
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get install -yq samba winbind krb5-config libnss-winbind
-RUN mkdir /shared_ofimatica /shared_negocio /shared_control
+RUN mkdir /shared
 
 COPY s*.conf /etc/samba/
 COPY krb5.conf /etc/
 COPY nsswitch.conf /etc/
 COPY run.sh /root/
 
-VOLUME /shared_ofimatica /shared_negocio /shared_control
+VOLUME /shared
 EXPOSE 137/udp 138/udp 139 445
 
 # Para que se quede corriendo. El script de inicio de samba hace “exit 0”
